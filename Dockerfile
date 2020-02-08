@@ -5,7 +5,7 @@ RUN apt-get update \
   && git clone --depth=1 --branch=OpenSSL_1_1_1d https://github.com/openssl/openssl.git \
   && cd openssl && chmod +x config && ./config && remake -j4 && remake -j1 install \
   && pip install --upgrade pip \
-  && pip install git+https://github.com/awslabs/aws-crt-python@v0.5.8 \
+  && pip install git+https://github.com/awslabs/aws-crt-python@v0.5.9 \
   && pip install awsiotsdk \
   && apt-get remove -y cmake git remake gcc g++ pkg-config \
   && rm -rf openssl \
